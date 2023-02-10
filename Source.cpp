@@ -2,232 +2,232 @@
 #include <vector>
 using namespace std;
 
-string padej(int total) {		// Podbiraet pravil'nyj padezh dlya otobrazheniya summy v bukvennom vide
+string padej(int total) {		// selects the correct case to display in alphabetic form
 	string words;
 	if (total / 100000 == 1) {
-		words = words + "Sto ";
+		words = words + "hundred ";
 	}
 	else if (total / 100000 == 2) {
-		words = words + "Dvesti ";
+		words = words + "two hundred ";
 	}
 	else if (total / 100000 == 3) {
-		words = words + "Trista ";
+		words = words + "three hundred ";
 	}
 	else if (total / 100000 == 4) {
-		words = words + "CHetyresta ";
+		words = words + "four hundred ";
 	}
 	else if (total / 100000 == 5) {
-		words = words + "Pyat'sot ";
+		words = words + "five hundred ";
 	}
 	else if (total / 100000 == 6) {
-		words = words + "SHest'sot ";
+		words = words + "six hundreds ";
 	}
 	else if (total / 100000 == 7) {
-		words = words + "Sem'sot ";
+		words = words + "seven hundred ";
 	}
 	else if (total / 100000 == 8) {
-		words = words + "Vosem'sot ";
+		words = words + "eight hundred ";
 	}
 	else if (total / 100000 == 9) {
-		words = words + "Devyat'sot ";
+		words = words + "nine hundred ";
 	}
 	if ((total % 100000) / 1000 == 11) {
-		words = words + "odinnadcat' tysyach ";
+		words = words + "eleven thousand ";
 	}
 	else if ((total % 100000) / 1000 == 12) {
-		words = words + "dvenadcat' tysyach ";
+		words = words + "twelve thousand ";
 	}
 	else if ((total % 100000) / 1000 == 13) {
-		words = words + "trinadcat' tysyach ";
+		words = words + "thirteen thousand ";
 	}
 	else if ((total % 100000) / 1000 == 14) {
-		words = words + "chetyrnadcat' tysyach ";
+		words = words + "fourteen thousand ";
 	}
 	else if ((total % 100000) / 1000 == 15) {
-		words = words + "pyatnadcat' tysyach ";
+		words = words + "fifteen thousand ";
 	}
 	else if ((total % 100000) / 1000 == 16) {
-		words = words + "shestnadcat' tysyach ";
+		words = words + "sixteen thousand ";
 	}
 	else if ((total % 100000) / 1000 == 17) {
-		words = words + "semnadcat' tysyach ";
+		words = words + "seventeen thousand ";
 	}
 	else if ((total % 100000) / 1000 == 18) {
-		words = words + "vosemnadcat' tysyach ";
+		words = words + "eighteen thousand ";
 	}
 	else if ((total % 100000) / 1000 == 19) {
-		words = words + "devyatnadcat' tysyach ";
+		words = words + "nineteen thousand ";
 	}
 	if ((total % 100000) / 1000 == 10) {
 		words = words + "desyat' ";
 	}
 	else if ((total % 100000) / 10000 == 2) {
-		words = words + "dvadcat' ";
+		words = words + "ten ";
 	}
 	else if ((total % 100000) / 10000 == 2) {
-		words = words + "dvadcat' ";
+		words = words + "twenty ";
 	}
 	else if ((total % 100000) / 10000 == 3) {
-		words = words + "tridcat' ";
+		words = words + "thirty ";
 	}
 	else if ((total % 100000) / 10000 == 4) {
-		words = words + "sorok ";
+		words = words + "forty ";
 	}
 	else if ((total % 100000) / 10000 == 5) {
-		words = words + "pyat'desyat ";
+		words = words + "fifty ";
 	}
 	else if ((total % 100000) / 10000 == 6) {
-		words = words + "shest'desyat ";
+		words = words + "sixty ";
 	}
 	else if ((total % 100000) / 10000 == 7) {
-		words = words + "sem'desyat ";
+		words = words + "seventy ";
 	}
 	else if ((total % 100000) / 10000 == 8) {
-		words = words + "vosem'desyat ";
+		words = words + "eighty ";
 	}
 	else if ((total % 100000) / 10000 == 9) {
 		words = words + "devyanosto ";
 	}
 	if ((total % 10000) / 1000 == 0 && (total > 999)) {
-		words = words + "tysyach ";
+		words = words + "ninety ";
 	}
 	else if ((total % 10000) / 1000 == 1 && (total % 100000) / 1000 != 11) {
-		words = words + "odna tysyacha ";
+		words = words + "one thousand ";
 	}
 	else if ((total % 10000) / 1000 == 2 && (total % 100000) / 1000 != 12) {
-		words = words + "dve tysyachi ";
+		words = words + "two thousand ";
 	}
 	else if ((total % 10000) / 1000 == 3 && (total % 100000) / 1000 != 13) {
-		words = words + "tri tysyachi ";
+		words = words + "three thousand ";
 	}
 	else if ((total % 10000) / 1000 == 4 && (total % 100000) / 1000 != 14) {
-		words = words + "chetyre tysyachi ";
+		words = words + "four thousand ";
 	}
 	else if ((total % 10000) / 1000 == 5 && (total % 100000) / 1000 != 15) {
-		words = words + "pyat' tysyach ";
+		words = words + "five thousand ";
 	}
 	else if ((total % 10000) / 1000 == 6 && (total % 100000) / 1000 != 16) {
-		words = words + "shest' tysyach ";
+		words = words + "six thousand ";
 	}
 	else if ((total % 10000) / 1000 == 7 && (total % 100000) / 1000 != 17) {
-		words = words + "sem' tysyach ";
+		words = words + "seven thousand ";
 	}
 	else if ((total % 10000) / 1000 == 8 && (total % 100000) / 1000 != 18) {
-		words = words + "vosem' tysyach ";
+		words = words + "eight thousand ";
 	}
 	else if ((total % 10000) / 1000 == 9 && (total % 100000) / 1000 != 19) {
-		words = words + "devyat' tysyach ";
+		words = words + "nine thousand ";
 	}
 	if ((total % 1000) / 100 == 1) {
-		words = words + "sto ";
+		words = words + "hundred ";
 	}
 	else if ((total % 1000) / 100 == 2) {
-		words = words + "dvesti ";
+		words = words + "two hundred ";
 	}
 	else if ((total % 1000) / 100 == 3) {
-		words = words + "trista ";
+		words = words + "three hundred ";
 	}
 	else if ((total % 1000) / 100 == 4) {
-		words = words + "chetyresta ";
+		words = words + "four hundred ";
 	}
 	else if ((total % 1000) / 100 == 5) {
-		words = words + "pyat'sot ";
+		words = words + "hundred ";
 	}
 	else if ((total % 1000) / 100 == 6) {
-		words = words + "shest'sot ";
+		words = words + "five hundred ";
 	}
 	else if ((total % 1000) / 100 == 7) {
-		words = words + "sem'sot ";
+		words = words + "six hundred ";
 	}
 	else if ((total % 1000) / 100 == 8) {
-		words = words + "vosem'sot ";
+		words = words + "seven hundred ";
 	}
 	else if ((total % 1000) / 100 == 9) {
-		words = words + "devyat'sot ";
+		words = words + "eight hundred ";
 	}
 	if ((total % 100) == 11) {
-		words = words + "odinnadcat' ";
+		words = words + "eleven ";
 	}
 	else if ((total % 100) == 12) {
-		words = words + "dvenadcat' ";
+		words = words + "twelve ";
 	}
 	else if ((total % 100) == 13) {
-		words = words + "trinadcat' ";
+		words = words + "thirteen ";
 	}
 	else if ((total % 100) == 14) {
-		words = words + "chetyrnadcat' ";
+		words = words + "fourteen ";
 	}
 	else if ((total % 100) == 15) {
-		words = words + "pyatnadcat' ";
+		words = words + "fifteen ";
 	}
 	else if ((total % 100) == 16) {
-		words = words + "shestnadcat' ";
+		words = words + "sixteen ";
 	}
 	else if ((total % 100) == 17) {
-		words = words + "semnadcat' ";
+		words = words + "seventeen ";
 	}
 	else if ((total % 100) == 18) {
-		words = words + "vosemnadcat' ";
+		words = words + "eighteen ";
 	}
 	else if ((total % 100) == 19) {
-		words = words + "devyatnadcat' ";
+		words = words + "nineteen ";
 	}
 	if ((total % 100) / 10 == 10) {
-		words = words + "desyat' ";
+		words = words + "ten ";
 	}
 	else if ((total % 100) / 10 == 2) {
-		words = words + "dvadcat' ";
+		words = words + "twenty ";
 	}
 	else if ((total % 100) / 10 == 3) {
-		words = words + "tridcat' ";
+		words = words + "thirty ";
 	}
 	else if ((total % 100) / 10 == 4) {
-		words = words + "sorok ";
+		words = words + "forty ";
 	}
 	else if ((total % 100) / 10 == 5) {
-		words = words + "pyat'desyat ";
+		words = words + "fifty ";
 	}
 	else if ((total % 100) / 10 == 6) {
-		words = words + "shest'desyat ";
+		words = words + "sixty ";
 	}
 	else if ((total % 100) / 10 == 7) {
-		words = words + "sem'desyat ";
+		words = words + "seventy ";
 	}
 	else if ((total % 100) / 10 == 8) {
-		words = words + "vosem'desyat ";
+		words = words + "eighty ";
 	}
 	else if ((total % 100) / 10 == 9) {
-		words = words + "devyanosto ";
+		words = words + "ninety ";
 	}
 	if (total % 10 == 1) {
-		words = words + "odin rubl'";
+		words = words + "one ruble";
 	}
 	else if (total % 10 == 2) {
-		words = words + "dva rublya";
+		words = words + "two rubles";
 	}
 	else if (total % 10 == 3) {
-		words = words + "tri rublya";
+		words = words + "three rubles";
 	}
 	else if (total % 10 == 4) {
-		words = words + "chetyre rublya";
+		words = words + "four rubles";
 	}
 	else if (total % 10 == 5) {
-		words = words + "pyat' rublej";
+		words = words + "five rubles";
 	}
 	else if (total % 10 == 6) {
-		words = words + "shest' rublej";
+		words = words + "six rubles";
 	}
 	else if (total % 10 == 7) {
-		words = words + "sem' rublej";
+		words = words + "seven rubles";
 	}
 	else if (total % 10 == 8) {
-		words = words + "vosem' rublej";
+		words = words + "eight rubles";
 	}
 	else if (total % 10 == 9) {
-		words = words + "devyat' rublej";
+		words = words + "nine rubles";
 	}
 	else if (total % 10 == 0) {
-		words = words + "rublej";
+		words = words + "rubles";
 	}
 	return words;
 }
@@ -236,35 +236,35 @@ int main() {
 	int employee, temp, total = 0;
 	vector <int> km;
 	vector <int> price;
-	cout << "Vvedite kolichestvo sotrudnikov kotoryh nuzhno razvesti: ";		// Pol'zovatel' vvodit kolichestvo sotrudnikov
+	cout << "enter the number of employees: ";
 	cin >> employee;
-	for (int i = 0; i < employee; i++) {	// Pol'zovatel' vvodit rasstoyanie dlya doma kazhdogo sotrudnika
-		cout << "Vvedite rasstoyanie do doma " << i + 1 << "-go sotrudnika(km): ";
+	for (int i = 0; i < employee; i++) {	// the user enters the distance to each employee's home
+		cout << "enter the distance to the house " << i + 1 << "employee(km): ";
 		cin >> temp;
 		km.push_back(temp);
 	}
-	for (int i = 0; i < employee; i++) {	// Pol'zovatel' vvodit tarif u kazhdogo taksista
-		cout << "Vvedite stoimost' za 1 km u " << i + 1 << "-go taksista(rubli): ";
+	for (int i = 0; i < employee; i++) {	// the user enters the fare for each taxi driver
+		cout << "enter the cost per 1 km " << i + 1 << "-th taxi driver(ruble): ";
 		cin >> temp;
 		price.push_back(temp);
 	}
-	for (int i = 0; i < employee; i++) {	//	Cikl sortiruet rasstoyanie do doma kazhdogo sotrudnika
+	for (int i = 0; i < employee; i++) {	//	the loop sorts the distance to each employee's home
 		for (int j = 0; j < employee - 1; j++) {
 			if (km[j] > km[j + 1]) {
 				swap(km[j], km[j + 1]);
 			}
 		}
-		for (int j = 0; j < employee - 1; j++) {	//	Cikl sortiruet ceny u kazhdogo taksista
+		for (int j = 0; j < employee - 1; j++) {	//	the cycle sorts the price for each taxi driver
 			if (price[j] < price[j + 1]) {
 				swap(price[j], price[j + 1]);
 			}
 		}
 	}
-	for (int i = 0; i < employee; i++) {	//	Vyvodit kakoj sotrudnik po kakomu tarifu poedet
-		cout << "Sotrudnika, kotoromu ekhat' do doma " << km[i] << " km, posadim k taksistu s tarifom " << price[i] << " za 1 km" << endl;
-		cout << "Eta poezdka obojdetsya v " << km[i] * price[i] << endl;
+	for (int i = 0; i < employee; i++) {	//	displays which employee will travel at which tariff
+		cout << "the employee who needs to go home " << km[i] << " we will put km to the taxi driver with the fare " << price[i] << "for 1 km" << endl;
+		cout << "this trip will cost in " << km[i] * price[i] << endl;
 		total = total + (km[i] * price[i]);
 	}
-	cout << "Summarno vse poezdki obojdutsya v: " << total << endl;	// Vyvodit summarnyj schet za vse poezdki
-	cout << "Itogovaya summa slovami - " << padej(total);	// Vyvodit summarnyj schet za vse poezdki slovami
+	cout << "in total, all trips will cost in: " << total << endl;
+	cout << "the total amount in words - " << padej(total);
 }
